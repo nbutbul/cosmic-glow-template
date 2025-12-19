@@ -93,7 +93,7 @@ const Header = () => {
                 variant="neon"
                 size="sm"
                 onClick={() => scrollToSection("#contact")}
-                className="text-sm font-medium"
+                className="text-sm font-bold tracking-wide"
               >
                 בואו נדבר
               </Button>
