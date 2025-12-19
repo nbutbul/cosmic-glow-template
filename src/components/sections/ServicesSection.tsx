@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Video, Sparkles, Camera, Instagram } from "lucide-react";
 import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
+import ScrollToNextSection from "@/components/ui/ScrollToNextSection";
 
 const services = [
   {
@@ -85,6 +86,7 @@ const ServicesSection = () => {
         </div>
       </div>
       <ScrollToTopButton />
+      <ScrollToNextSection targetId="process" />
     </section>
   );
 };

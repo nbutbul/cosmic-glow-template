@@ -81,7 +81,13 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 1.5 }}
-        className="absolute bottom-10 scroll-indicator"
+        className="absolute bottom-10 scroll-indicator cursor-pointer"
+        onClick={() => {
+          const element = document.getElementById('services');
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }}
       >
         <ChevronDown className="w-8 h-8 text-primary" />
       </motion.div>

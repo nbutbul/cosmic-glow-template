@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
+import ScrollToNextSection from "@/components/ui/ScrollToNextSection";
 
 interface MediaItem {
   src: string;
@@ -138,6 +139,7 @@ const MediaGallery = () => {
         </motion.div>
       </div>
       <ScrollToTopButton />
+      <ScrollToNextSection targetId="cta" />
     </section>
   );
 };

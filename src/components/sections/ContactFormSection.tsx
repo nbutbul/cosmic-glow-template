@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
+import ScrollToNextSection from "@/components/ui/ScrollToNextSection";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "נא למלא שם מלא").max(100, "השם ארוך מדי"),
@@ -234,6 +235,7 @@ const ContactFormSection = () => {
         </motion.div>
       </div>
       <ScrollToTopButton />
+      <ScrollToNextSection targetId="footer" />
     </section>
   );
 };

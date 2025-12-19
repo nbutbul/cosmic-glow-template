@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
+import ScrollToNextSection from "@/components/ui/ScrollToNextSection";
 
 const CTASection = () => {
   const ref = useRef(null);
@@ -16,7 +17,7 @@ const CTASection = () => {
   };
 
   return (
-    <section ref={ref} className="py-32 px-4 md:px-8 relative overflow-hidden">
+    <section id="cta" ref={ref} className="py-32 px-4 md:px-8 relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[100px]" />
@@ -73,6 +74,7 @@ const CTASection = () => {
         </motion.div>
       </div>
       <ScrollToTopButton />
+      <ScrollToNextSection targetId="faq" />
     </section>
   );
 };
