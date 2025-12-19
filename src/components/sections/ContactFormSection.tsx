@@ -73,7 +73,7 @@ const ContactFormSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-background relative" dir="rtl">
+    <section id="contact" className="min-h-screen py-24 md:py-32 bg-background relative flex flex-col justify-center" dir="rtl">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
