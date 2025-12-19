@@ -14,7 +14,7 @@ const HeroSection = () => {
           className="text-muted-foreground text-lg md:text-xl mb-6 tracking-widest uppercase"
           dir="rtl"
         >
-          סטודיו <span className="bg-primary text-primary-foreground normal-case font-bold px-3 py-1 rounded-full glow-pulse inline-block">Art33</span> - מומחים לצילום וסושיאל
+          סטודיו <span className="bg-primary text-[#FFFFFF] normal-case font-bold px-3 py-1 rounded-full glow-pulse inline-block">Art33</span> - מומחים לצילום וסושיאל
         </motion.p>
         
         <motion.h1
