@@ -1,15 +1,9 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import AnimatedBackground from "@/components/ui/AnimatedBackground";
 
 const HeroSection = () => {
   return (
     <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
-      {/* Animated Background - same as header and footer */}
-      <div className="absolute inset-0">
-        <AnimatedBackground variant="footer" />
-      </div>
-      
 
       {/* Main content */}
       <div className="text-center z-10 max-w-5xl">
