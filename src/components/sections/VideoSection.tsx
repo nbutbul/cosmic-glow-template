@@ -18,15 +18,16 @@ const VideoSection = () => {
           playsInline
           preload="metadata"
         >
+          {/* Professional photographer/videographer working with business content */}
           <source
-            src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            src="https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
         </video>
         
-        {/* Optional subtle overlay for visual integration */}
-        <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-background/20 via-transparent to-background/20" />
+        {/* Subtle overlay for visual integration with hero */}
+        <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-background/30 via-transparent to-background/30" />
       </motion.div>
     </section>
   );
