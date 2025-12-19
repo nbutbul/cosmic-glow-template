@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import AnimatedBackground from "@/components/ui/AnimatedBackground";
 
 const navLinks = [
   { label: "בית", href: "#hero" },
@@ -45,15 +44,9 @@ const Header = () => {
         }`}
         dir="rtl"
       >
-        {/* Animated Background - identical to footer */}
-        <div
-          className={`absolute inset-0 transition-opacity duration-500 ${
-            isScrolled ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <div className="absolute inset-0 bg-background/70 backdrop-blur-xl" />
-          <AnimatedBackground variant="footer" className="opacity-50" />
-          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        {/* Solid Black Background - No animations */}
+        <div className="absolute inset-0 bg-black">
+          <div className="absolute inset-x-0 bottom-0 h-px bg-primary/20" />
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
@@ -128,11 +121,8 @@ const Header = () => {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 md:hidden"
           >
-            {/* Backdrop with animated background - identical to footer */}
-            <div className="absolute inset-0">
-              <div className="absolute inset-0 bg-background/95 backdrop-blur-xl" />
-              <AnimatedBackground variant="footer" className="opacity-30" />
-            </div>
+            {/* Solid Black Backdrop */}
+            <div className="absolute inset-0 bg-black" />
 
             {/* Menu Content */}
             <motion.nav
