@@ -139,7 +139,7 @@ const MediaGallery = () => {
         </motion.div>
       </div>
       <ScrollToTopButton />
-      <ScrollToNextSection targetId="cta" />
+      <ScrollToNextSection targetId="services" />
     </section>
   );
 };

@@ -235,7 +235,7 @@ const ContactFormSection = () => {
         </motion.div>
       </div>
       <ScrollToTopButton />
-      <ScrollToNextSection targetId="footer" />
+      <ScrollToNextSection targetId="faq" />
     </section>
   );
 };

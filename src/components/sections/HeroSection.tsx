@@ -83,7 +83,7 @@ const HeroSection = () => {
         transition={{ duration: 0.6, delay: 1.5 }}
         className="absolute bottom-10 scroll-indicator cursor-pointer"
         onClick={() => {
-          const element = document.getElementById('services');
+          const element = document.getElementById('portfolio');
           if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
           }
