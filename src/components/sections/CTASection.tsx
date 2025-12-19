@@ -59,7 +59,7 @@ const CTASection = () => {
             onClick={() => scrollToSection("#contact")}
             className="bg-primary text-primary-foreground text-lg px-10 py-4 rounded-full glow-pulse hover:scale-105 transition-transform font-bold tracking-wide inline-flex items-center gap-2 group"
           >
-            בואו נתחיל
+            בואו נדבר
             <ArrowRight className="w-5 h-5 group-hover:-translate-x-1 transition-transform rotate-180" />
           </button>
           
