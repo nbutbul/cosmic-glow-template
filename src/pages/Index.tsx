@@ -1,5 +1,6 @@
 import Header from "@/components/sections/Header";
 import HeroSection from "@/components/sections/HeroSection";
+import VideoSection from "@/components/sections/VideoSection";
 import StorySection from "@/components/sections/StorySection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import ProcessSection from "@/components/sections/ProcessSection";
@@ -14,6 +15,7 @@ const Index = () => {
     <main className="bg-background min-h-screen overflow-x-hidden">
       <Header />
       <HeroSection />
+      <VideoSection />
       <StorySection />
       <ServicesSection />
       <ProcessSection />
