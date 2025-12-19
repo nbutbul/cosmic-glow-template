@@ -62,7 +62,7 @@ const ServicesSection = () => {
                 <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                   <service.icon className="w-6 h-6" />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 text-right">
                   <span className="text-primary/70 text-xs uppercase tracking-wider">{service.highlight}</span>
                   <h3 className="text-2xl font-bold mt-1 mb-3 group-hover:gradient-text transition-all">
                     {service.title}
