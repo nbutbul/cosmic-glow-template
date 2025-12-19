@@ -24,8 +24,8 @@ const HeroSection = () => {
           className="text-5xl md:text-7xl lg:text-8xl font-black leading-none mb-8"
         >
           <span className="block">Behind</span>
-          <span className="block gradient-text text-glow italic -my-2 md:-my-4 lg:-my-6 transform -rotate-3">Lens</span>
-          <span className="block">The</span>
+          <span className="block gradient-text text-glow italic -my-2 md:-my-4 lg:-my-6 transform -rotate-3">The</span>
+          <span className="block">Lens</span>
         </motion.h1>
         
         <motion.p
