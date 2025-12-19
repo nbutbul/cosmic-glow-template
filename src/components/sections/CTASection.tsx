@@ -7,6 +7,13 @@ const CTASection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section ref={ref} className="py-32 px-4 md:px-8 relative overflow-hidden">
       {/* Background glow */}
@@ -48,13 +55,19 @@ const CTASection = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <button className="bg-primary text-primary-foreground text-lg px-10 py-4 rounded-full glow-pulse hover:scale-105 transition-transform font-bold tracking-wide inline-flex items-center gap-2 group">
-            Start Your Project
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          <button 
+            onClick={() => scrollToSection("#contact")}
+            className="bg-primary text-primary-foreground text-lg px-10 py-4 rounded-full glow-pulse hover:scale-105 transition-transform font-bold tracking-wide inline-flex items-center gap-2 group"
+          >
+            בואו נתחיל
+            <ArrowRight className="w-5 h-5 group-hover:-translate-x-1 transition-transform rotate-180" />
           </button>
           
-          <button className="border border-primary/50 bg-transparent text-primary hover:bg-primary/10 hover:border-primary px-10 py-4 rounded-full font-bold tracking-wide transition-all duration-300">
-            View Portfolio
+          <button 
+            onClick={() => scrollToSection("#portfolio")}
+            className="border border-primary/50 bg-transparent text-primary hover:bg-primary/10 hover:border-primary px-10 py-4 rounded-full font-bold tracking-wide transition-all duration-300"
+          >
+            הפורטפוליו שלנו
           </button>
         </motion.div>
       </div>
