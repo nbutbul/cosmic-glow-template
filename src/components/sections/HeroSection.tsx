@@ -63,7 +63,7 @@ const HeroSection = () => {
         >
           <button 
             onClick={() => {
-              const element = document.getElementById('contact');
+              const element = document.getElementById('services');
               if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
               }
