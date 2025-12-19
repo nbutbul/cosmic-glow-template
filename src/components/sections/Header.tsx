@@ -3,8 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const navLinks = [
+export const navLinks = [
   { label: "בית", href: "#hero" },
+  { label: "הסיפור שלנו", href: "#story" },
   { label: "שירותים", href: "#services" },
   { label: "תהליך", href: "#process" },
   { label: "המלצות", href: "#testimonials" },
