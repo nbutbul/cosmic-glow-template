@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
 
 const faqItems = [
   {
@@ -32,7 +33,7 @@ const faqItems = [
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="py-24 md:py-32 bg-card/30" dir="rtl">
+    <section id="faq" className="py-24 md:py-32 bg-card/30 relative" dir="rtl">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -102,6 +103,7 @@ const FAQSection = () => {
           </button>
         </motion.div>
       </div>
+      <ScrollToTopButton />
     </section>
   );
 };

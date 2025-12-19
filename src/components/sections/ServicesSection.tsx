@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Video, Sparkles, Camera, Instagram } from "lucide-react";
+import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
 
 const services = [
   {
@@ -35,7 +36,7 @@ const ServicesSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="services" ref={ref} className="py-32 px-4 md:px-8">
+    <section id="services" ref={ref} className="py-32 px-4 md:px-8 relative">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -83,6 +84,7 @@ const ServicesSection = () => {
           ))}
         </div>
       </div>
+      <ScrollToTopButton />
     </section>
   );
 };

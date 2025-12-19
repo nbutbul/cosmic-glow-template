@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
+import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
 
 const CTASection = () => {
   const ref = useRef(null);
@@ -71,6 +72,7 @@ const CTASection = () => {
           </button>
         </motion.div>
       </div>
+      <ScrollToTopButton />
     </section>
   );
 };
