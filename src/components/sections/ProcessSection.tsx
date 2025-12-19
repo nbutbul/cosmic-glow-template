@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
+import ScrollToNextSection from "@/components/ui/ScrollToNextSection";
 
 const steps = [
   {
@@ -78,6 +79,7 @@ const ProcessSection = () => {
         </div>
       </div>
       <ScrollToTopButton />
+      <ScrollToNextSection targetId="portfolio" />
     </section>
   );
 };

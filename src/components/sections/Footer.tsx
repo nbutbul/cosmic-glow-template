@@ -19,7 +19,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative py-16 px-4 md:px-8 overflow-hidden">
+    <footer id="footer" className="relative py-16 px-4 md:px-8 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <AnimatedBackground variant="footer" />
