@@ -132,7 +132,7 @@ const MediaGallery = () => {
             onClick={() => scrollToSection("#contact")}
             className="text-lg px-8"
           >
-            בואו נתחיל
+            השירותים שלנו
           </Button>
         </motion.div>
       </div>
