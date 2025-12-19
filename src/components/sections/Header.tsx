@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import AnimatedBackground from "@/components/ui/AnimatedBackground";
 
 const navLinks = [
   { label: "בית", href: "#hero" },
@@ -38,14 +39,23 @@ const Header = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? "py-3 bg-background/80 backdrop-blur-xl border-b border-primary/10"
-            : "py-5 bg-transparent"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          isScrolled ? "py-3" : "py-5"
         }`}
         dir="rtl"
       >
-        <div className="container mx-auto px-6">
+        {/* Animated Background */}
+        <div
+          className={`absolute inset-0 transition-opacity duration-500 ${
+            isScrolled ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <div className="absolute inset-0 bg-background/70 backdrop-blur-xl" />
+          <AnimatedBackground variant="header" className="opacity-50" />
+          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
           <div className="flex items-center justify-between">
             {/* CTA Button - Left side (appears on right in RTL) */}
             <div className="hidden md:block">
@@ -117,14 +127,11 @@ const Header = () => {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 md:hidden"
           >
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="absolute inset-0 bg-background/95 backdrop-blur-xl"
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
+            {/* Backdrop with animated background */}
+            <div className="absolute inset-0">
+              <div className="absolute inset-0 bg-background/95 backdrop-blur-xl" />
+              <AnimatedBackground variant="header" className="opacity-30" />
+            </div>
 
             {/* Menu Content */}
             <motion.nav
@@ -132,9 +139,18 @@ const Header = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.3, delay: 0.1 }}
-              className="relative h-full flex flex-col items-center justify-center gap-8"
+              className="relative h-full flex flex-col items-center justify-center gap-8 z-10"
               dir="rtl"
             >
+              {/* Close button */}
+              <button
+                className="absolute top-6 right-6 p-2 text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                <X size={28} />
+              </button>
+
               {navLinks.map((link, index) => (
                 <motion.a
                   key={link.label}
