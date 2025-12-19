@@ -80,7 +80,7 @@ const Header = () => {
                     e.preventDefault();
                     scrollToSection(link.href);
                   }}
-                  className="relative text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 group whitespace-nowrap"
+                  className="relative text-sm font-bold tracking-wide text-muted-foreground hover:text-foreground transition-colors duration-200 group whitespace-nowrap"
                   whileHover={{ y: -2 }}
                 >
                   {link.label}
@@ -155,7 +155,7 @@ const Header = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + index * 0.05 }}
-                  className="text-2xl font-medium text-foreground hover:text-primary transition-colors duration-200"
+                  className="text-2xl font-bold tracking-wide text-foreground hover:text-primary transition-colors duration-200"
                 >
                   {link.label}
                 </motion.a>

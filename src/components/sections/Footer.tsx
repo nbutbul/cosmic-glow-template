@@ -58,7 +58,7 @@ const Footer = () => {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
+                className="text-sm font-bold tracking-wide text-muted-foreground hover:text-primary transition-colors duration-200"
               >
                 {link.label}
               </a>
