@@ -53,20 +53,8 @@ const Header = () => {
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex items-center justify-between">
-            {/* CTA Button - Left side (appears on right in RTL) */}
-            <div className="hidden md:block">
-              <Button
-                variant="neon"
-                size="sm"
-                onClick={() => scrollToSection("#contact")}
-                className="text-sm font-medium"
-              >
-                בואו נדבר
-              </Button>
-            </div>
-
-            {/* Logo - Center */}
-            <div className="absolute left-1/2 -translate-x-1/2">
+            {/* Logo - Left side */}
+            <div className="flex-shrink-0">
               <motion.a
                 href="#hero"
                 onClick={(e) => {
@@ -82,8 +70,8 @@ const Header = () => {
               </motion.a>
             </div>
 
-            {/* Navigation Links - Right side (appears on left in RTL) */}
-            <nav className="hidden md:flex items-center gap-8">
+            {/* Navigation Links - Center */}
+            <nav className="hidden md:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
               {navLinks.map((link) => (
                 <motion.a
                   key={link.label}
@@ -92,7 +80,7 @@ const Header = () => {
                     e.preventDefault();
                     scrollToSection(link.href);
                   }}
-                  className="relative text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 group"
+                  className="relative text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 group whitespace-nowrap"
                   whileHover={{ y: -2 }}
                 >
                   {link.label}
@@ -100,6 +88,18 @@ const Header = () => {
                 </motion.a>
               ))}
             </nav>
+
+            {/* CTA Button - Right side */}
+            <div className="hidden md:block flex-shrink-0">
+              <Button
+                variant="neon"
+                size="sm"
+                onClick={() => scrollToSection("#contact")}
+                className="text-sm font-medium"
+              >
+                בואו נדבר
+              </Button>
+            </div>
 
             {/* Mobile Menu Button */}
             <button
