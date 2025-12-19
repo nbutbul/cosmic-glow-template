@@ -19,7 +19,7 @@ const services = [
   {
     icon: Camera,
     title: "The Full Package",
-    description: "From concept to final cut, we handle everything. You dream it, we bring it to life with cinematic precision.",
+    description: "מהפריים הראשון ועד הפרסום ברשתות – אנחנו מטפלים בהכל. אתם חולמים, אנחנו מגשימים.",
     highlight: "End-to-End Production"
   },
   {
