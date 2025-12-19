@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import AnimatedBackground from "@/components/ui/AnimatedBackground";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
-      {/* Background particles */}
-      <div className="particle w-64 h-64 top-20 left-10 opacity-20" />
-      <div className="particle w-96 h-96 bottom-20 right-10 opacity-15" style={{ animationDelay: '2s' }} />
-      <div className="particle w-48 h-48 top-1/2 left-1/3 opacity-10" style={{ animationDelay: '4s' }} />
+      {/* Animated Background - same as header and footer */}
+      <div className="absolute inset-0">
+        <AnimatedBackground variant="footer" />
+      </div>
       
       {/* Logo */}
       <motion.div
