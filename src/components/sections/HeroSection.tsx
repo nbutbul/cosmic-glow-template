@@ -12,8 +12,9 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-muted-foreground text-lg md:text-xl mb-6 tracking-widest uppercase"
+          dir="rtl"
         >
-          Creative Visual Agency
+          סטודיו לקריאייטיב ויזואל
         </motion.p>
         
         <motion.h1
@@ -32,8 +33,9 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-12"
+          dir="rtl"
         >
-          We bring your vision to life through captivating visuals and cinematic experiences that leave lasting impressions.
+          אנחנו לא רק מצלמים, אנחנו יוצרים מציאות. הופכים את החזון שלכם לחוויות קולנועיות שגורמות לאנשים לעצור את הגלילה ולהתחיל להתרגש.
         </motion.p>
 
         <motion.div
