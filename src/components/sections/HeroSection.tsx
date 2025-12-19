@@ -18,14 +18,32 @@ const HeroSection = () => {
         </motion.p>
         
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
           className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-8"
         >
-          <span className="block">Behind</span>
-          <span className="block gradient-text text-glow">The</span>
-          <span className="block">Lens</span>
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
+            className="block"
+          >
+            Behind
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
+            className="block gradient-text text-glow"
+          >
+            The
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
+            className="block"
+          >
+            Lens
+          </motion.span>
         </motion.h1>
         
         <motion.p
