@@ -69,8 +69,9 @@ const HeroSection = () => {
               }
             }}
             className="bg-primary text-primary-foreground text-lg px-10 py-4 rounded-full glow-pulse hover:scale-105 transition-transform font-bold tracking-wide"
+            dir="rtl"
           >
-            Start Your Story
+            הקסם שלכם מתחיל כאן
           </button>
         </motion.div>
       </div>
