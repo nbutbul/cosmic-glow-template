@@ -7,7 +7,7 @@ export const navLinks = [
   { label: "בית", href: "#hero" },
   { label: "פורטפוליו", href: "#portfolio" },
   { label: "שירותים", href: "#services" },
-  { label: "תהליך", href: "#process" },
+  { label: "התהליך שלנו", href: "#process" },
   { label: "שאלות נפוצות", href: "#faq" },
   { label: "צור קשר", href: "#contact" },
 ];
