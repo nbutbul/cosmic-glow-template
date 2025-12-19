@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Video, Sparkles, Camera, Film } from "lucide-react";
+import { Video, Sparkles, Camera, Instagram } from "lucide-react";
 
 const services = [
   {
@@ -23,10 +23,10 @@ const services = [
     highlight: "End-to-End Production"
   },
   {
-    icon: Film,
-    title: "Success Stories",
-    description: "Real results from real clients. Our work speaks for itself through increased engagement and brand recognition.",
-    highlight: "Proven Track Record"
+    icon: Instagram,
+    title: "ניהול רשתות",
+    description: "כל סטורי, פוסט ומילה – בונים את המוניטין שלכם. בלי ידע שיווקי זה משחק בעיוור. תנו לנו את ההגה – אתם תראו לאן זה מוביל.",
+    highlight: "Facebook, Instagram and more"
   }
 ];
 
