@@ -79,7 +79,7 @@ const ProcessSection = () => {
         </div>
       </div>
       <ScrollToTopButton />
-      <ScrollToNextSection targetId="contact" />
+      <ScrollToNextSection targetId="cta" />
     </section>
   );
 };
