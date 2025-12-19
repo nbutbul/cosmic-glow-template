@@ -41,7 +41,8 @@ const ServicesSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-right mb-16"
+          dir="rtl"
         >
           <span className="text-primary text-sm uppercase tracking-widest">השירותים שלנו</span>
           <h2 className="text-4xl md:text-5xl font-black mt-4">
