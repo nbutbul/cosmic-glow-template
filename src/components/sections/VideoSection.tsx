@@ -18,9 +18,9 @@ const VideoSection = () => {
           playsInline
           preload="metadata"
         >
-          {/* Professional photographer/videographer working with business content */}
+          {/* Professional social media content creator/photographer for businesses */}
           <source
-            src="https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4"
+            src="https://videos.pexels.com/video-files/6774272/6774272-uhd_2732_1440_25fps.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
