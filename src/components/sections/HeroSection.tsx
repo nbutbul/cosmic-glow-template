@@ -16,6 +16,23 @@ const HeroSection = () => {
     },
   });
 
+  const getFloatingAnimation = (offset: number) => {
+    if (shouldReduceMotion) return {};
+    return {
+      animate: {
+        y: [0, -6, 0],
+      },
+      transition: {
+        y: {
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut" as const,
+          delay: 1.8 + offset,
+        },
+      },
+    };
+  };
+
   const hoverEffect = shouldReduceMotion
     ? {}
     : {
@@ -44,24 +61,39 @@ const HeroSection = () => {
         >
           <motion.span
             {...getHeadlineAnimation(0.8)}
-            whileHover={hoverEffect}
-            className="block transition-[filter] duration-300"
+            className="block"
           >
-            Behind
+            <motion.span
+              {...getFloatingAnimation(0)}
+              whileHover={hoverEffect}
+              className="block transition-[filter] duration-300"
+            >
+              Behind
+            </motion.span>
           </motion.span>
           <motion.span
             {...getHeadlineAnimation(0.9)}
-            whileHover={hoverEffect}
-            className="block gradient-text text-glow transition-[filter] duration-300"
+            className="block"
           >
-            The
+            <motion.span
+              {...getFloatingAnimation(0.3)}
+              whileHover={hoverEffect}
+              className="block gradient-text text-glow transition-[filter] duration-300"
+            >
+              The
+            </motion.span>
           </motion.span>
           <motion.span
             {...getHeadlineAnimation(1.0)}
-            whileHover={hoverEffect}
-            className="block transition-[filter] duration-300"
+            className="block"
           >
-            Lens
+            <motion.span
+              {...getFloatingAnimation(0.6)}
+              whileHover={hoverEffect}
+              className="block transition-[filter] duration-300"
+            >
+              Lens
+            </motion.span>
           </motion.span>
         </motion.h1>
         
