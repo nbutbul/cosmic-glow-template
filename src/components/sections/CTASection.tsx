@@ -17,7 +17,7 @@ const CTASection = () => {
   };
 
   return (
-    <section id="cta" ref={ref} className="py-32 px-4 md:px-8 relative overflow-hidden">
+    <section id="cta" ref={ref} className="min-h-screen py-32 px-4 md:px-8 relative overflow-hidden flex flex-col justify-center">
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[100px]" />
