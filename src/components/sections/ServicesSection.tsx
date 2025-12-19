@@ -43,7 +43,7 @@ const ServicesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary text-sm uppercase tracking-widest">Our Services</span>
+          <span className="text-primary text-sm uppercase tracking-widest">השירותים שלנו</span>
           <h2 className="text-4xl md:text-5xl font-black mt-4">
             What We <span className="gradient-text">Create</span>
           </h2>
