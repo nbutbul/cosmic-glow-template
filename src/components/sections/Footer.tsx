@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Instagram, Youtube, Mail, Phone } from "lucide-react";
 import AnimatedBackground from "@/components/ui/AnimatedBackground";
+import { navLinks } from "./Header";
 
 const Footer = () => {
   const socialLinks = [
@@ -10,12 +11,12 @@ const Footer = () => {
     { icon: Phone, href: "#", label: "Phone" }
   ];
 
-  const footerLinks = [
-    { label: "Services", href: "#services" },
-    { label: "Portfolio", href: "#story" },
-    { label: "About", href: "#process" },
-    { label: "Contact", href: "#contact" }
-  ];
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <footer className="relative py-16 px-4 md:px-8 overflow-hidden">
@@ -40,19 +41,24 @@ const Footer = () => {
             </span>
           </motion.div>
 
-          {/* Links */}
+          {/* Navigation Links - Same as Header */}
           <motion.nav
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="flex gap-8"
+            className="flex flex-wrap justify-center gap-6 md:gap-8"
+            dir="rtl"
           >
-            {footerLinks.map((link) => (
+            {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-muted-foreground hover:text-primary transition-colors underline-hover"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(link.href);
+                }}
+                className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -88,7 +94,7 @@ const Footer = () => {
           viewport={{ once: true }}
           className="mt-12 pt-8 border-t border-border/20 text-center text-sm text-muted-foreground"
         >
-          <p>© 2024 Studio. All rights reserved. | Crafted with passion</p>
+          <p>© 2024 Art33.co.il. All rights reserved. | Crafted with passion</p>
         </motion.div>
       </div>
     </footer>
