@@ -94,7 +94,7 @@ const Footer = () => {
           viewport={{ once: true }}
           className="mt-12 pt-8 border-t border-border/20 text-center text-sm text-muted-foreground"
         >
-          <p>© 2024 Art33.co.il. All rights reserved. | Crafted with passion</p>
+          <p>© 2025 Art33.co.il. All rights reserved. | Crafted with passion</p>
         </motion.div>
       </div>
     </footer>
