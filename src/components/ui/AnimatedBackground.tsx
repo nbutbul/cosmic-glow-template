@@ -61,7 +61,7 @@ const AnimatedBackground = ({ variant = "header", className = "" }: AnimatedBack
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `hsla(330, 100%, 60%, ${particle.opacity})`;
+        ctx.fillStyle = `hsla(48, 100%, 50%, ${particle.opacity})`;
         ctx.fill();
       });
 
@@ -88,11 +88,11 @@ const AnimatedBackground = ({ variant = "header", className = "" }: AnimatedBack
       {/* Base gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background" />
 
-      {/* Animated gradient orbs */}
+      {/* Animated gradient orbs - Yellow palette */}
       <motion.div
         className="absolute -top-1/2 -left-1/4 w-[60%] h-[200%] rounded-full opacity-20"
         style={{
-          background: "radial-gradient(circle, hsl(330 100% 50% / 0.3) 0%, transparent 70%)",
+          background: "radial-gradient(circle, hsl(48 100% 50% / 0.3) 0%, transparent 70%)",
           filter: "blur(60px)",
         }}
         animate={{
@@ -110,7 +110,7 @@ const AnimatedBackground = ({ variant = "header", className = "" }: AnimatedBack
       <motion.div
         className="absolute -bottom-1/2 -right-1/4 w-[50%] h-[150%] rounded-full opacity-15"
         style={{
-          background: "radial-gradient(circle, hsl(300 100% 50% / 0.25) 0%, transparent 70%)",
+          background: "radial-gradient(circle, hsl(45 100% 45% / 0.25) 0%, transparent 70%)",
           filter: "blur(80px)",
         }}
         animate={{
@@ -129,7 +129,7 @@ const AnimatedBackground = ({ variant = "header", className = "" }: AnimatedBack
         <motion.div
           className="absolute top-1/4 left-1/2 w-[40%] h-[100%] rounded-full opacity-10"
           style={{
-            background: "radial-gradient(circle, hsl(340 100% 55% / 0.2) 0%, transparent 60%)",
+            background: "radial-gradient(circle, hsl(52 100% 55% / 0.2) 0%, transparent 60%)",
             filter: "blur(50px)",
           }}
           animate={{
@@ -144,7 +144,7 @@ const AnimatedBackground = ({ variant = "header", className = "" }: AnimatedBack
         />
       )}
 
-      {/* Flowing wave SVG */}
+      {/* Flowing wave SVG - Yellow gradient */}
       <svg
         className="absolute bottom-0 left-0 w-full h-32 opacity-10"
         viewBox="0 0 1440 120"
@@ -168,19 +168,19 @@ const AnimatedBackground = ({ variant = "header", className = "" }: AnimatedBack
         />
         <defs>
           <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="hsl(330 100% 60%)" />
-            <stop offset="50%" stopColor="hsl(300 100% 55%)" />
-            <stop offset="100%" stopColor="hsl(330 100% 60%)" />
+            <stop offset="0%" stopColor="hsl(48 100% 50%)" />
+            <stop offset="50%" stopColor="hsl(45 100% 45%)" />
+            <stop offset="100%" stopColor="hsl(48 100% 50%)" />
           </linearGradient>
         </defs>
       </svg>
 
-      {/* Subtle grid overlay */}
+      {/* Subtle grid overlay - Yellow */}
       <div
         className="absolute inset-0 opacity-[0.02]"
         style={{
-          backgroundImage: `linear-gradient(hsl(330 100% 60%) 1px, transparent 1px),
-                           linear-gradient(90deg, hsl(330 100% 60%) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(hsl(48 100% 50%) 1px, transparent 1px),
+                           linear-gradient(90deg, hsl(48 100% 50%) 1px, transparent 1px)`,
           backgroundSize: "50px 50px",
         }}
       />
