@@ -7,13 +7,13 @@ const services = [
   {
     icon: Video,
     title: "Be Social",
-    description: "צריכים תוכן שיגרום לכולם לעצור ולהקשיב? אנחנו מייצרים סרטונים שמושכים את העין ומדברים בשפה של הרשתות.",
+    description: "תוכן שעוצר סקרול? זה בדיוק מה שאנחנו עושים. צילום תמונות וסרטונים שמושכים את העין, מדברים בשפה של הקהל, וממירים צפיות בלייקים, שיתופים ומכירות.",
     highlight: "Reels, TikToks & Stories"
   },
   {
     icon: Sparkles,
-    title: "Stunning Visuals",
-    description: "Whether it's a brand story or a product showcase, we create visuals that capture attention and drive engagement.",
+    title: "שיווק מוצר",
+    description: "סיפור מותג או הצגת מוצר – אנחנו יוצרים ויזואליה שמושכת מבטים וגורמת לקהל להגיב, לשתף ולהתחבר",
     highlight: "Brand & Product Films"
   },
   {
