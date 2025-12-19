@@ -17,16 +17,16 @@ const services = [
     highlight: "Brand & Product Films"
   },
   {
-    icon: Camera,
-    title: "The Full Package",
-    description: "מהפריים הראשון ועד הפרסום ברשתות – אנחנו מטפלים בהכל. אתם חולמים, אנחנו מגשימים.",
-    highlight: "End-to-End Production"
-  },
-  {
     icon: Instagram,
     title: "ניהול רשתות",
     description: "כל סטורי, פוסט ומילה – בונים את המוניטין שלכם. בלי ידע שיווקי זה משחק בעיוור. תנו לנו את ההגה – אתם תראו לאן זה מוביל.",
     highlight: "Facebook, Instagram and more"
+  },
+  {
+    icon: Camera,
+    title: "The Full Package",
+    description: "מהפריים הראשון ועד הפרסום ברשתות – אנחנו מטפלים בהכל. אתם חולמים, אנחנו מגשימים.",
+    highlight: "End-to-End Production"
   }
 ];
 
