@@ -5,23 +5,23 @@ import { useRef } from "react";
 const steps = [
   {
     number: "01",
-    title: "Discovery",
-    description: "We dive deep into your brand, goals, and vision to understand what makes you unique."
+    title: "מחקר",
+    description: "אנחנו צוללים עמוק לתוך המוצר שלכם, מבינים את המטרות והשאיפות, ויוצרים תוכן שהופך אתכם לייחודיים"
   },
   {
     number: "02",
-    title: "Concept & Script",
-    description: "Our creative team develops compelling concepts and scripts that tell your story."
+    title: "קונספט & תסריט",
+    description: "מהקונספט ועד לתסריט: אנחנו יוצרים את המעטפת הקריאייטיבית שהופכת את הסיפור שלכם לחוויה ויזואלית שפשוט אי אפשר לפספס."
   },
   {
     number: "03",
-    title: "Production",
-    description: "State-of-the-art equipment and experienced crew bring your vision to life."
+    title: "הפקה",
+    description: "טכנולוגיה מתקדמת וצוות מיומן נפגשים בסט כדי להעניק לחזון שלכם חיים"
   },
   {
     number: "04",
-    title: "Post & Delivery",
-    description: "Expert editing, color grading, and sound design for a polished final product."
+    title: "",
+    description: "אנחנו לא רק עורכים, אנחנו בונים את הרגש. אנחנו יוצרים את הקסם דרך עריכה ודיוק בפרטים הקטנים. התהליך מסתיים בהגשת תוצר מוגמר בסטנדרט הגבוה ביותר ומוכן להזניק את הנוכחות הדיגיטלית שלכם"
   }
 ];
 
