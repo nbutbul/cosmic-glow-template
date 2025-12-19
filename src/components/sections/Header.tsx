@@ -44,14 +44,14 @@ const Header = () => {
         }`}
         dir="rtl"
       >
-        {/* Animated Background */}
+        {/* Animated Background - identical to footer */}
         <div
           className={`absolute inset-0 transition-opacity duration-500 ${
             isScrolled ? "opacity-100" : "opacity-0"
           }`}
         >
           <div className="absolute inset-0 bg-background/70 backdrop-blur-xl" />
-          <AnimatedBackground variant="header" className="opacity-50" />
+          <AnimatedBackground variant="footer" className="opacity-50" />
           <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
         </div>
 
@@ -127,10 +127,10 @@ const Header = () => {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 md:hidden"
           >
-            {/* Backdrop with animated background */}
+            {/* Backdrop with animated background - identical to footer */}
             <div className="absolute inset-0">
               <div className="absolute inset-0 bg-background/95 backdrop-blur-xl" />
-              <AnimatedBackground variant="header" className="opacity-30" />
+              <AnimatedBackground variant="footer" className="opacity-30" />
             </div>
 
             {/* Menu Content */}
