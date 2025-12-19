@@ -72,7 +72,7 @@ const TestimonialsSection = () => {
               {/* Hover glow effect */}
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                 style={{
-                  background: "radial-gradient(circle at center, hsl(var(--neon-pink) / 0.1), transparent 70%)"
+                  background: "radial-gradient(circle at center, hsl(var(--neon-yellow) / 0.1), transparent 70%)"
                 }}
               />
             </motion.div>
