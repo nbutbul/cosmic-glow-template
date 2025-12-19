@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
+import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "נא למלא שם מלא").max(100, "השם ארוך מדי"),
@@ -71,7 +72,7 @@ const ContactFormSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-background" dir="rtl">
+    <section id="contact" className="py-24 md:py-32 bg-background relative" dir="rtl">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -232,6 +233,7 @@ const ContactFormSection = () => {
           </AnimatePresence>
         </motion.div>
       </div>
+      <ScrollToTopButton />
     </section>
   );
 };
