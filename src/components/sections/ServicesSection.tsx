@@ -37,7 +37,7 @@ const ServicesSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="services" ref={ref} className="py-32 px-4 md:px-8 relative">
+    <section id="services" ref={ref} className="min-h-screen py-32 px-4 md:px-8 relative flex flex-col justify-center">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
