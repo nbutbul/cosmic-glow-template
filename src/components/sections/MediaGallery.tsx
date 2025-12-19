@@ -107,7 +107,7 @@ const MediaGallery = () => {
             <span className="text-primary">הפורטפוליו</span> שלנו
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            צפו בעבודות שלנו ובתוצאות שאנחנו יוצרים ללקוחות
+            טעימה קטנה מחוויה גדולה
           </p>
         </motion.div>
 
@@ -132,7 +132,7 @@ const MediaGallery = () => {
             onClick={() => scrollToSection("#contact")}
             className="text-lg px-8"
           >
-            בואו ניצור יחד
+            בואו נתחיל
           </Button>
         </motion.div>
       </div>
