@@ -129,7 +129,7 @@ const MediaGallery = () => {
           <Button
             variant="neon"
             size="lg"
-            onClick={() => scrollToSection("#contact")}
+            onClick={() => scrollToSection("#services")}
             className="text-lg px-8"
           >
             השירותים שלנו
