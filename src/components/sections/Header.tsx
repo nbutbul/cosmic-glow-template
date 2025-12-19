@@ -9,6 +9,7 @@ const navLinks = [
   { label: "שירותים", href: "#services" },
   { label: "תהליך", href: "#process" },
   { label: "המלצות", href: "#testimonials" },
+  { label: "שאלות נפוצות", href: "#faq" },
   { label: "צור קשר", href: "#contact" },
 ];
 
