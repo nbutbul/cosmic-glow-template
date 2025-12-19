@@ -107,7 +107,7 @@ const MediaGallery = () => {
             <span className="text-primary">הפורטפוליו</span> שלנו
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            טעימה קטנה מחוויה גדולה
+            טעימות קטנות מחוויות גדולות
           </p>
         </motion.div>
 
