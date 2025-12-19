@@ -1,46 +1,7 @@
-import { motion, useReducedMotion, type Easing } from "framer-motion";
+import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const HeroSection = () => {
-  const shouldReduceMotion = useReducedMotion();
-
-  const easeOut: Easing = [0.16, 1, 0.3, 1];
-
-  const getHeadlineAnimation = (delay: number) => ({
-    initial: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: {
-      duration: shouldReduceMotion ? 0.3 : 0.8,
-      delay: shouldReduceMotion ? 0.1 : delay,
-      ease: easeOut,
-    },
-  });
-
-  const getFloatingAnimation = (offset: number) => {
-    if (shouldReduceMotion) return {};
-    return {
-      animate: {
-        y: [0, -6, 0],
-      },
-      transition: {
-        y: {
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut" as const,
-          delay: 1.8 + offset,
-        },
-      },
-    };
-  };
-
-  const hoverEffect = shouldReduceMotion
-    ? {}
-    : {
-        y: -2,
-        filter: "brightness(1.1)",
-        transition: { duration: 0.25, ease: easeOut },
-      };
-
   return (
     <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
 
@@ -57,43 +18,31 @@ const HeroSection = () => {
         </motion.p>
         
         <motion.h1
-          className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-8 cursor-default"
+          className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-8"
         >
           <motion.span
-            {...getHeadlineAnimation(0.8)}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
             className="block"
           >
-            <motion.span
-              {...getFloatingAnimation(0)}
-              whileHover={hoverEffect}
-              className="block transition-[filter] duration-300"
-            >
-              Behind
-            </motion.span>
+            Behind
           </motion.span>
           <motion.span
-            {...getHeadlineAnimation(0.9)}
-            className="block"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
+            className="block gradient-text text-glow"
           >
-            <motion.span
-              {...getFloatingAnimation(0.3)}
-              whileHover={hoverEffect}
-              className="block gradient-text text-glow transition-[filter] duration-300"
-            >
-              The
-            </motion.span>
+            The
           </motion.span>
           <motion.span
-            {...getHeadlineAnimation(1.0)}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
             className="block"
           >
-            <motion.span
-              {...getFloatingAnimation(0.6)}
-              whileHover={hoverEffect}
-              className="block transition-[filter] duration-300"
-            >
-              Lens
-            </motion.span>
+            Lens
           </motion.span>
         </motion.h1>
         
