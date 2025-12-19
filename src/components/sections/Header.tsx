@@ -9,7 +9,7 @@ const navLinks = [
   { label: "שירותים", href: "#services" },
   { label: "תהליך", href: "#process" },
   { label: "המלצות", href: "#testimonials" },
-  { label: "צור קשר", href: "#cta" },
+  { label: "צור קשר", href: "#contact" },
 ];
 
 const Header = () => {
@@ -62,7 +62,7 @@ const Header = () => {
               <Button
                 variant="neon"
                 size="sm"
-                onClick={() => scrollToSection("#cta")}
+                onClick={() => scrollToSection("#contact")}
                 className="text-sm font-medium"
               >
                 בואו נדבר
@@ -81,8 +81,8 @@ const Header = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="text-primary">STUDIO</span>
-                <span className="text-foreground">.PRO</span>
+                <span className="text-primary">Art33</span>
+                <span className="text-foreground">.co.il</span>
               </motion.a>
             </div>
 
@@ -177,7 +177,7 @@ const Header = () => {
                 <Button
                   variant="neon"
                   size="lg"
-                  onClick={() => scrollToSection("#cta")}
+                  onClick={() => scrollToSection("#contact")}
                 >
                   בואו נדבר
                 </Button>

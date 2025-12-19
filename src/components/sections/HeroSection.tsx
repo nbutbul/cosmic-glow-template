@@ -4,21 +4,12 @@ import AnimatedBackground from "@/components/ui/AnimatedBackground";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
+    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
       {/* Animated Background - same as header and footer */}
       <div className="absolute inset-0">
         <AnimatedBackground variant="footer" />
       </div>
       
-      {/* Logo */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="absolute top-8 left-8"
-      >
-        <span className="text-2xl font-bold gradient-text">Studio</span>
-      </motion.div>
 
       {/* Main content */}
       <div className="text-center z-10 max-w-5xl">

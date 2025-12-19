@@ -29,7 +29,7 @@ const TestimonialsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section ref={ref} className="py-32 px-4 md:px-8 relative overflow-hidden">
+    <section id="testimonials" ref={ref} className="py-32 px-4 md:px-8 relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
       
