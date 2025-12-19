@@ -74,7 +74,7 @@ const CTASection = () => {
         </motion.div>
       </div>
       <ScrollToTopButton />
-      <ScrollToNextSection targetId="faq" />
+      <ScrollToNextSection targetId="contact" />
     </section>
   );
 };
