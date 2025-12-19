@@ -21,11 +21,11 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-8"
+          className="text-5xl md:text-7xl lg:text-8xl font-black leading-none mb-8"
         >
-          <span className="block">Stunning</span>
-          <span className="block gradient-text text-glow">Visual</span>
-          <span className="block">Storytelling</span>
+          <span className="block">Behind</span>
+          <span className="block gradient-text text-glow italic -my-2 md:-my-4 lg:-my-6 transform -rotate-3">Lens</span>
+          <span className="block">The</span>
         </motion.h1>
         
         <motion.p
