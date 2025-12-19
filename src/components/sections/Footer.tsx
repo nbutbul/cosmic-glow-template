@@ -35,8 +35,8 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <span className="text-2xl font-bold">
-              <span className="text-primary">STUDIO</span>
-              <span className="text-foreground">.PRO</span>
+              <span className="text-primary">Art33</span>
+              <span className="text-foreground">.co.il</span>
             </span>
           </motion.div>
 
