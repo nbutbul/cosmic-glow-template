@@ -61,7 +61,7 @@ const AnimatedBackground = ({ variant = "header", className = "" }: AnimatedBack
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `hsla(48, 100%, 50%, ${particle.opacity})`;
+        ctx.fillStyle = `hsla(0, 0%, 100%, ${particle.opacity})`;
         ctx.fill();
       });
 
@@ -174,16 +174,6 @@ const AnimatedBackground = ({ variant = "header", className = "" }: AnimatedBack
           </linearGradient>
         </defs>
       </svg>
-
-      {/* Subtle grid overlay - Yellow */}
-      <div
-        className="absolute inset-0 opacity-[0.02]"
-        style={{
-          backgroundImage: `linear-gradient(hsl(48 100% 50%) 1px, transparent 1px),
-                           linear-gradient(90deg, hsl(48 100% 50%) 1px, transparent 1px)`,
-          backgroundSize: "50px 50px",
-        }}
-      />
 
       {/* Particle canvas */}
       <canvas
