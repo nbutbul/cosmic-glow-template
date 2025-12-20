@@ -8,7 +8,7 @@ const Footer = () => {
     { icon: Phone, href: "tel:0502332327", label: "Phone" },
     { icon: MessageCircle, href: "https://wa.me/972502332327", label: "WhatsApp" },
     { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Instagram, href: "https://www.instagram.com/art33.co.il/", label: "Instagram" },
     { icon: Mail, href: "mailto:nadav@art33.co.il", label: "Email" }
   ];
 
