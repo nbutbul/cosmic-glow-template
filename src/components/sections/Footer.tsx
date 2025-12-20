@@ -5,11 +5,11 @@ import { navLinks } from "./Header";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Phone, href: "#", label: "Phone" },
-    { icon: MessageCircle, href: "#", label: "WhatsApp" },
+    { icon: Phone, href: "tel:0502332327", label: "Phone" },
+    { icon: MessageCircle, href: "https://wa.me/972502332327", label: "WhatsApp" },
     { icon: Facebook, href: "#", label: "Facebook" },
     { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Mail, href: "#", label: "Email" }
+    { icon: Mail, href: "mailto:nadav@art33.co.il", label: "Email" }
   ];
 
   const scrollToSection = (href: string) => {
