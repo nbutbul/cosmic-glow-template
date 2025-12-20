@@ -236,25 +236,26 @@ const ContactFormSection = () => {
         </motion.div>
       </div>
       
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
-        viewport={{ once: true }}
-        className="flex justify-center mt-auto pb-20"
-      >
-        <button 
-          onClick={() => {
-            const element = document.getElementById('faq');
-            if (element) {
-              element.scrollIntoView({ behavior: 'smooth' });
-            }
-          }}
-          className="bg-primary text-primary-foreground text-lg px-10 py-4 rounded-full glow-pulse hover:scale-105 transition-transform font-bold tracking-wide"
+      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-10">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: true }}
         >
-          שאלות ותשובות
-        </button>
-      </motion.div>
+          <button 
+            onClick={() => {
+              const element = document.getElementById('faq');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="bg-primary text-primary-foreground text-lg px-10 py-4 rounded-full glow-pulse hover:scale-105 transition-transform font-bold tracking-wide"
+          >
+            שאלות ותשובות
+          </button>
+        </motion.div>
+      </div>
       
       <ScrollToTopButton />
       <ScrollToNextSection targetId="faq" />
