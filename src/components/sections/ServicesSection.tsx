@@ -26,7 +26,7 @@ const services = [
   },
   {
     icon: Camera,
-    title: "All-in-ONE",
+    title: "All-in ONE",
     description: "מהפריים הראשון ועד הפרסום ברשתות – אנחנו מטפלים בהכל. אתם חולמים, אנחנו מגשימים",
     highlight: "End-to-End Production"
   }
