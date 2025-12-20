@@ -77,6 +77,19 @@ const ProcessSection = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.5, delay: 1 }}
+          className="flex justify-center mt-16"
+        >
+          <button 
+            className="bg-primary text-primary-foreground text-lg px-10 py-4 rounded-full glow-pulse hover:scale-105 transition-transform font-bold tracking-wide"
+          >
+            מוכנים לעשות קסמים?
+          </button>
+        </motion.div>
       </div>
       <ScrollToTopButton />
       <ScrollToNextSection targetId="cta" />
