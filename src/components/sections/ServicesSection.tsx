@@ -93,7 +93,7 @@ const ServicesSection = () => {
         >
           <button 
             onClick={() => {
-              const element = document.getElementById('services');
+              const element = document.getElementById('process');
               if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
               }
