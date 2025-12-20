@@ -41,7 +41,7 @@ const ProcessSection = () => {
           className="text-center mb-20"
         >
           <span className="text-primary text-sm uppercase tracking-widest">התהליך שלנו</span>
-          <h2 className="text-4xl md:text-5xl font-black mt-4">
+          <h2 className="text-4xl md:text-5xl font-bold mt-4">
             איך <span className="gradient-text">הקסם</span> קורה
           </h2>
         </motion.div>
