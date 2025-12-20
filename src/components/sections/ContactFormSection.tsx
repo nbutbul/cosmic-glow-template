@@ -250,7 +250,7 @@ const ContactFormSection = () => {
                 element.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="bg-primary text-primary-foreground text-lg px-10 py-4 rounded-full glow-pulse hover:scale-105 transition-transform font-bold tracking-wide"
+            className="bg-primary text-primary-foreground text-base px-6 py-2.5 rounded-full glow-pulse hover:scale-105 transition-transform font-bold tracking-wide"
           >
             שאלות ותשובות
           </button>
