@@ -5,11 +5,11 @@ import { navLinks } from "./Header";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Phone, href: "tel:0502332327", label: "Phone" },
-    { icon: MessageCircle, href: "https://wa.me/972502332327", label: "WhatsApp" },
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Instagram, href: "https://www.instagram.com/art33.co.il/", label: "Instagram" },
-    { icon: Mail, href: "mailto:nadav@art33.co.il", label: "Email" }
+    { icon: Phone, href: "tel:0502332327", label: "Phone", external: false },
+    { icon: MessageCircle, href: "https://wa.me/972502332327", label: "WhatsApp", external: true },
+    { icon: Facebook, href: "#", label: "Facebook", external: false },
+    { icon: Instagram, href: "https://www.instagram.com/art33.co.il/", label: "Instagram", external: true },
+    { icon: Mail, href: "mailto:nadav@art33.co.il", label: "Email", external: false }
   ];
 
   const scrollToSection = (href: string) => {
@@ -79,6 +79,8 @@ const Footer = () => {
                 key={social.label}
                 href={social.href}
                 aria-label={social.label}
+                target={social.external ? "_blank" : undefined}
+                rel={social.external ? "noopener noreferrer" : undefined}
                 className="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 backdrop-blur-sm bg-background/30"
               >
                 <social.icon className="w-4 h-4" />
