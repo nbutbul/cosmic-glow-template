@@ -85,6 +85,12 @@ const ProcessSection = () => {
           className="flex justify-center mt-16"
         >
           <button 
+            onClick={() => {
+              const element = document.getElementById('cta');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             className="bg-primary text-primary-foreground text-lg px-10 py-4 rounded-full glow-pulse hover:scale-105 transition-transform font-bold tracking-wide"
           >
             מוכנים לעשות קסמים?
