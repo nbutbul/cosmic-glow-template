@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
-import { Instagram, Facebook, Mail, Phone } from "lucide-react";
+import { Instagram, Facebook, Mail, Phone, MessageCircle } from "lucide-react";
 import AnimatedBackground from "@/components/ui/AnimatedBackground";
 import { navLinks } from "./Header";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Phone, href: "#", label: "Phone" },
+    { icon: MessageCircle, href: "#", label: "WhatsApp" },
     { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Mail, href: "#", label: "Email" },
-    { icon: Phone, href: "#", label: "Phone" }
+    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Mail, href: "#", label: "Email" }
   ];
 
   const scrollToSection = (href: string) => {
