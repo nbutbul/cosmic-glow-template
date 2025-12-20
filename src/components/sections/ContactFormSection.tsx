@@ -233,27 +233,29 @@ const ContactFormSection = () => {
             )}
           </AnimatePresence>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="flex justify-center mt-12"
-          >
-            <button 
-              onClick={() => {
-                const element = document.getElementById('faq');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="bg-primary text-primary-foreground text-lg px-10 py-4 rounded-full glow-pulse hover:scale-105 transition-transform font-bold tracking-wide"
-            >
-              שאלות ותשובות
-            </button>
-          </motion.div>
         </motion.div>
       </div>
+      
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        viewport={{ once: true }}
+        className="flex justify-center mt-auto pb-20"
+      >
+        <button 
+          onClick={() => {
+            const element = document.getElementById('faq');
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+          className="bg-primary text-primary-foreground text-lg px-10 py-4 rounded-full glow-pulse hover:scale-105 transition-transform font-bold tracking-wide"
+        >
+          שאלות ותשובות
+        </button>
+      </motion.div>
+      
       <ScrollToTopButton />
       <ScrollToNextSection targetId="faq" />
     </section>
