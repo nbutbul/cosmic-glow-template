@@ -63,7 +63,7 @@ const HeroSection = () => {
         >
           <button 
             onClick={() => {
-              const element = document.getElementById('services');
+              const element = document.getElementById('portfolio');
               if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
               }
