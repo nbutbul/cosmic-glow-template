@@ -7,7 +7,7 @@ const Footer = () => {
   const socialLinks = [
     { icon: Phone, href: "tel:0502332327", label: "Phone", external: false },
     { icon: MessageCircle, href: "https://wa.me/972502332327", label: "WhatsApp", external: true },
-    { icon: Facebook, href: "#", label: "Facebook", external: false },
+    { icon: Facebook, href: "https://www.facebook.com/share/1DTFwPBEgT/?mibextid=wwXIfr", label: "Facebook", external: true },
     { icon: Instagram, href: "https://www.instagram.com/art33.co.il/", label: "Instagram", external: true },
     { icon: Mail, href: "mailto:nadav@art33.co.il", label: "Email", external: false }
   ];
