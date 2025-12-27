@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
+import { supabase } from "@/integrations/supabase/client";
 import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
 import ScrollToNextSection from "@/components/ui/ScrollToNextSection";
 
@@ -24,6 +25,7 @@ const ContactFormSection = () => {
     phone: "",
     message: "",
   });
+  const [honeypot, setHoneypot] = useState("");
   const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -55,15 +57,37 @@ const ContactFormSection = () => {
       return;
     }
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-    toast({
-      title: "ההודעה נשלחה בהצלחה!",
-      description: "נחזור אליך בהקדם האפשרי.",
-    });
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          pageUrl: window.location.href,
+          honeypot: honeypot,
+        },
+      });
+
+      if (error) {
+        throw new Error(error.message);
+      }
+
+      setIsSubmitted(true);
+      toast({
+        title: "ההודעה נשלחה בהצלחה!",
+        description: "נחזור אליך בהקדם האפשרי.",
+      });
+    } catch (error: any) {
+      console.error("Contact form error:", error);
+      toast({
+        title: "שגיאה בשליחה",
+        description: error.message || "נסה שוב מאוחר יותר.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const resetForm = () => {
@@ -147,6 +171,16 @@ const ContactFormSection = () => {
                 onSubmit={handleSubmit}
                 className="space-y-6"
               >
+                {/* Honeypot field - hidden from users */}
+                <input
+                  type="text"
+                  name="website"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                  style={{ display: 'none' }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium text-foreground">
                     שם מלא
