@@ -96,6 +96,10 @@ const ContactFormSection = () => {
     setIsSubmitted(false);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <section id="contact" className="min-h-screen py-24 md:py-32 bg-background relative flex flex-col justify-center" dir="rtl">
       <div className="container mx-auto px-6">
@@ -158,9 +162,14 @@ const ContactFormSection = () => {
                 <p className="text-muted-foreground mb-8">
                   ההודעה נשלחה בהצלחה. ניצור איתך קשר בהקדם.
                 </p>
-                <Button variant="outline" onClick={resetForm}>
-                  שליחת הודעה נוספת
-                </Button>
+                <div className="flex flex-col gap-4 items-center">
+                  <Button onClick={scrollToTop} className="min-w-[200px]">
+                    חזרה לדף הבית
+                  </Button>
+                  <Button variant="outline" onClick={resetForm}>
+                    שליחת הודעה נוספת
+                  </Button>
+                </div>
               </motion.div>
             ) : (
               <motion.form
